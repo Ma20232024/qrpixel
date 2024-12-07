@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Maker con QR Code</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pixel Art Maker con QR Code</h1>
+        <canvas id="canvas" width="400" height="400"></canvas>
+        <div class="palette" id="palette"></div>
+        <div class="instructions">
+            <p>Bienvenido a Pixel Art Maker con QR Code:</p>
+            <ul style="text-align: left; margin: 0 auto; max-width: 400px;">
+                <li>Selecciona un color de la paleta haciendo clic sobre él. El color seleccionado tendrá un borde dorado.</li>
+                <li>Dibuja en el lienzo con el color seleccionado.</li>
+                <li>Introduce una URL en el campo de texto y presiona "Generar QR" para pintar un código QR sobre el lienzo.</li>
+                <li>Usa el botón "Descargar Imagen" para guardar tu diseño como un archivo PNG.</li>
+            </ul>
+        </div>
+        <input type="text" id="qrInput" placeholder="Ingresa una URL o texto para el QR">
+        <button onclick="generateQR()">Generar QR</button>
+        <button onclick="downloadImage()">Descargar Imagen</button>
+        <div id="qrcode"></div> <!-- Contenedor para mostrar el QR -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
